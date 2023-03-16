@@ -10,6 +10,7 @@ try {
   //   console.log(http.STATUS_CODES);
   http
     .createServer((req, res) => {
+      // console.log("res,,,,,,,,", res, ".........res");
       res.end("Hello Node Server running on 5000 now");
     })
     .listen(5000);

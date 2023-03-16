@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "colors": "^1.4.0"
-  }
+  },
+  "name": "first_node",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarwar-asik/Node-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarwar-asik/Node-Server/issues"
+  },
+  "homepage": "https://github.com/sarwar-asik/Node-Server#readme"
 }
