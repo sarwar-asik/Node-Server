@@ -1,5 +1,6 @@
 console.log("node Server.js >>>>>>>>");
 
+const { stringify } = require("querystring");
 const { name, add, subtract } = require("./other");
 
 try {
@@ -11,7 +12,25 @@ try {
   http
     .createServer((req, res) => {
       // console.log("res,,,,,,,,", res, ".........res");
-      res.end("Hello Node Server running on 5000 now");
+      if (req.url === "/") {
+        res.writeHead(200, { "content-Type": "text/html" });
+        res.write("<h1>This is Home page</h1>");
+        res.end();
+      } else if (req.url === "/products") {
+        res.writeHead(200, { "content-Type": "text/html" });
+        res.write("<h1>Your  Products are here</h1>");
+        res.end();
+      } else if (req.url === "/productsDate") {
+        res.writeHead(200, { "content-Type": "application/json" });
+        res.write(
+          JSON.stringify(
+            { name: "Honda", img: "Nai" },
+            { name: "Micro", img: "janina" }
+          )
+        );
+        res.end();
+      }
+      // res.end("Hello Node Server running on 5000 now");
     })
     .listen(5000);
 
