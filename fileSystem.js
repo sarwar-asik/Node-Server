@@ -18,9 +18,7 @@ const server = http.createServer((req, res) => {
     // const data = fs.readFileSync("data.txt");
     // res.write(data);
     // res.end();
-
     // or ////
-
     fs.writeFile("newData.txt", "hello NodeJS ", (err) => {
       if (err) {
         req.write("Data failed for write");
